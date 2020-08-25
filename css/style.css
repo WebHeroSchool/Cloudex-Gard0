@@ -1,0 +1,147 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  opacity: 1;
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+.content {
+  width: 1366px;
+  height: 100%;
+  margin: auto;
+}
+
+.header__logo {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.header__logo:hover {
+  opacity: 0.6;
+}
+
+.header {
+  position: relative;
+  margin-top: 52px;
+  height: 80px;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav a {
+  margin-left: 24px;
+}
+
+.section {
+  margin-top: 306px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.information__title {
+  font-weight: bold;
+  width: 527px;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.information__text {
+  margin-top: 43px;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__title {
+  width: 206px;
+  height: 32px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.form__input {
+  margin-top: 16px;
+  width: 400px;
+  height: 53px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  font-size: 21px;
+  line-height: 25px;
+}
+
+.form__button {
+  margin-top: 16px;
+  width: 400px;
+  height: 53px;
+  background: #7400E8;
+  border-radius: 5px;
+  font-size: 21px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.form__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.form__text {
+  margin-top: 16px;
+  width: 400px;
+  height: 37px;
+  font-size: 16px;
+  line-height: 19px;
+  opacity: 0.5;
+}
+
+.form__text_link {
+  text-decoration: underline;
+}
+
+.form__text_link:hover {
+  opacity: 1;
+}
+
+.line {
+  position: absolute;
+  bottom: 0;
+  width: 99.90%;
+  height: 22px;
+  background: #7400E8;
+}

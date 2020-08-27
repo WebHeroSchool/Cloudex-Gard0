@@ -1,3 +1,87 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/css/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -5,18 +89,14 @@ body {
 a {
   text-decoration: none;
   color: #000000;
-  opacity: 1;
-  cursor: pointer;
-}
-
-a:hover {
-  opacity: 0.6;
 }
 
 .content {
   width: 1366px;
-  height: 100%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header__logo {
@@ -25,7 +105,7 @@ a:hover {
 }
 
 .header__logo:hover {
-  opacity: 0.6;
+  opacity: .6;
 }
 
 .header {
@@ -38,7 +118,6 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 0 0 auto;
 }
 
 .nav {
@@ -47,16 +126,22 @@ a:hover {
   align-items: center;
 }
 
-.nav a {
-  margin-left: 24px;
+.nav__link {
+  margin-right: 24px;
+  opacity: 1;
+}
+
+.nav__link:hover {
+  opacity: .6;
 }
 
 .section {
-  margin-top: 306px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex: 1;
+  
 }
 
 .information {
@@ -83,6 +168,33 @@ a:hover {
   flex-direction: column;
 }
 
+.section ::before {
+  position: absolute;
+  content: url("../img/Cloud-big.png");
+  width: min-content;
+  opacity: .1;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  display: block;
+}
+
+.section ::after {
+  position: absolute;
+  content: url("../img/Cloud-small.png");
+  opacity: .1;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  display: block;
+}
+
 .form__title {
   width: 206px;
   height: 32px;
@@ -93,13 +205,16 @@ a:hover {
 
 .form__input {
   margin-top: 16px;
-  width: 400px;
+  width: 380px;
   height: 53px;
-  background: #FFFFFF;
   border-radius: 5px;
   border: none;
   font-size: 21px;
   line-height: 25px;
+  opacity: .5;
+  padding-left: 16px;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .form__button {
@@ -107,6 +222,7 @@ a:hover {
   width: 400px;
   height: 53px;
   background: #7400E8;
+  color: #FFFFFF;
   border-radius: 5px;
   font-size: 21px;
   line-height: 25px;
@@ -118,7 +234,7 @@ a:hover {
 
 .form__button:hover {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: .6;
 }
 
 .form__text {
@@ -127,7 +243,8 @@ a:hover {
   height: 37px;
   font-size: 16px;
   line-height: 19px;
-  opacity: 0.5;
+  opacity: .5;
+  color: #000000;
 }
 
 .form__text_link {
@@ -138,10 +255,7 @@ a:hover {
   opacity: 1;
 }
 
-.line {
-  position: absolute;
-  bottom: 0;
-  width: 99.90%;
-  height: 22px;
+.footer {
+  padding: 10px;
   background: #7400E8;
 }

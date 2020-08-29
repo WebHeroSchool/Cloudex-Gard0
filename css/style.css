@@ -5,20 +5,26 @@ body {
 
 body::before {
   position: absolute;
-  content: url("../img/Cloud-big.png");
+  content: "";
   height: 790px;
   width: 1200px;
   right: 0;
   bottom: 0;
+  background-image: url("../img/Cloud-big.png");
+  background-size: cover;
+  z-index: -1;
 }
 
 body::after {
   position: absolute;
-  content: url("../img/Cloud-small.png");
-  height: 400px;
-  width: 800px;
+  content: "";
+  height: 690px;
+  width: 950px;
   right: 0;
   bottom: 0;
+  background-image: url("../img/Cloud-big.png");
+  background-size: cover;
+  z-index: -1;
 }
 
 a {
@@ -31,11 +37,9 @@ a {
   margin: auto;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 .header__logo {
-  opacity: 1;
   cursor: pointer;
 }
 
@@ -63,7 +67,6 @@ a {
 
 .nav__link {
   margin-right: 24px;
-  opacity: 1;
 }
 
 .nav__link:hover {
@@ -76,6 +79,7 @@ a {
   align-items: center;
   justify-content: space-between;
   flex: 1;
+  margin-bottom: 316px;
 }
 
 .information {
@@ -118,7 +122,6 @@ a {
   border: none;
   font-size: 21px;
   line-height: 25px;
-  opacity: .5;
   padding-left: 16px;
   background-color: #FFFFFF;
   color: #000000;
@@ -163,6 +166,10 @@ a {
 }
 
 .footer {
-  padding: 10px;
+  height: 23px;
   background: #7400E8;
+}
+
+@media (max-width: 1366px) {
+
 }

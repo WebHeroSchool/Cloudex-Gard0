@@ -1,13 +1,14 @@
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  position: relative;
 }
 
 body::before {
   position: absolute;
   content: "";
-  height: 790px;
-  width: 1200px;
+  width: 1186px;
+  height: 811px;
   right: 0;
   bottom: 0;
   background-image: url("../img/Cloud-big.png");
@@ -18,11 +19,11 @@ body::before {
 body::after {
   position: absolute;
   content: "";
-  height: 690px;
-  width: 950px;
+  width: 922px;
+  height: 613px;
   right: 0;
   bottom: 0;
-  background-image: url("../img/Cloud-big.png");
+  background-image: url("../img/Cloud-small.png");
   background-size: cover;
   z-index: -1;
 }
@@ -33,14 +34,10 @@ a {
 }
 
 .content {
-  width: 1366px;
+  width: 1503px;
   margin: auto;
   display: flex;
   flex-direction: column;
-}
-
-.header__logo {
-  cursor: pointer;
 }
 
 .header__logo:hover {
@@ -48,15 +45,15 @@ a {
 }
 
 .header {
-  position: relative;
-  margin-top: 52px;
-  height: 80px;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: bold;
+  padding-top: 52px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 306px;
+}
+
+.header__logo {
+  cursor: pointer;
 }
 
 .nav {
@@ -66,7 +63,10 @@ a {
 }
 
 .nav__link {
-  margin-right: 24px;
+  padding-right: 24px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .nav__link:hover {
@@ -90,13 +90,15 @@ a {
 .information__title {
   font-weight: bold;
   width: 527px;
+  height: 211px;
   font-size: 60px;
   line-height: 70px;
+  padding-bottom: 43px;
 }
 
 .information__text {
-  margin-top: 43px;
-  font-style: normal;
+  width: 577px;
+  height: 74px;
   font-size: 21px;
   line-height: 25px;
 }
@@ -112,24 +114,25 @@ a {
   font-weight: bold;
   font-size: 24px;
   line-height: 31px;
+  margin-bottom: 16px;
 }
 
 .form__input {
-  margin-top: 16px;
-  width: 380px;
+  width: 399px;
   height: 53px;
   border-radius: 5px;
   border: none;
   font-size: 21px;
   line-height: 25px;
   padding-left: 16px;
+  box-sizing: border-box;
   background-color: #FFFFFF;
   color: #000000;
+  margin-bottom: 16px;
 }
 
 .form__button {
-  margin-top: 16px;
-  width: 400px;
+  width: 399px;
   height: 53px;
   background: #7400E8;
   color: #FFFFFF;
@@ -140,6 +143,7 @@ a {
   align-items: center;
   justify-content: center;
   opacity: 1;
+  margin-bottom: 16px;
 }
 
 .form__button:hover {
@@ -148,7 +152,6 @@ a {
 }
 
 .form__text {
-  margin-top: 16px;
   width: 400px;
   height: 37px;
   font-size: 16px;
@@ -171,5 +174,70 @@ a {
 }
 
 @media (max-width: 1366px) {
+  body::before {
+    width: 890px;
+    height: 752px;
+  }
+  body::after {
+    width: 764px;
+    height: 538px;
+  }
+  .content {
+    width: 1050px;
+  }
+  .nav__link {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .section {
+    justify-content: space-around;
+  }
+  .information__title {
+    width: 381px;
+    height: 155px;
+    font-size: 44px;
+    line-height: 52px;
+  }
+  .information__text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__title {
+    width: 155px;
+    height: 24px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .form__input {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__button {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__text {
+    width: 293px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 
+@media (max-width: 1024px) {
+  body::before {
+    width: 665px;
+    height: 723px;
+  }
+  body::after {
+    width: 476px;
+    height: 532px;
+  }
+  .content {
+    width: 916px;
+  }
 }

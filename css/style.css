@@ -1,6 +1,26 @@
-
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+body::before {
+  position: absolute;
+  content: url("../img/Cloud-big.png");
+  height: 790px;
+  width: 1200px;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+  display: block;
+}
+
+body::after {
+  position: absolute;
+  content: url("../img/Cloud-small.png");
+  height: 400px;
+  width: 800px;
+  right: 0;
+  bottom: 0;
 }
 
 a {
@@ -58,7 +78,6 @@ a {
   align-items: center;
   justify-content: space-between;
   flex: 1;
-  
 }
 
 .information {
@@ -83,32 +102,6 @@ a {
 .form {
   display: flex;
   flex-direction: column;
-}
-
-.clouds ::before {
-  position: absolute;
-  content: url("../img/Cloud-big.png");
-  width: min-content;
-  opacity: .3;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
-  user-select: none;
-  display: block;
-}
-
-.clouds ::after {
-  position: absolute;
-  content: url("../img/Cloud-small.png");
-  opacity: .3;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  user-select: none;
-  display: block;
 }
 
 .form__title {

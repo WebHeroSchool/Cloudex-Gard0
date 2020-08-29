@@ -10,8 +10,6 @@ body::before {
   width: 1200px;
   right: 0;
   bottom: 0;
-  user-select: none;
-  display: block;
 }
 
 body::after {

@@ -1,31 +1,50 @@
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  height: 790px;
+  width: 1200px;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/Cloud-big.png");
+  background-size: cover;
+  z-index: -1;
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  height: 690px;
+  width: 950px;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/Cloud-big.png");
+  background-size: cover;
+  z-index: -1;
 }
 
 a {
   text-decoration: none;
   color: #000000;
-  opacity: 1;
-  cursor: pointer;
-}
-
-a:hover {
-  opacity: 0.6;
 }
 
 .content {
   width: 1366px;
-  height: 100%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__logo {
-  opacity: 1;
   cursor: pointer;
 }
 
 .header__logo:hover {
-  opacity: 0.6;
+  opacity: .6;
 }
 
 .header {
@@ -38,7 +57,6 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 0 0 auto;
 }
 
 .nav {
@@ -47,16 +65,21 @@ a:hover {
   align-items: center;
 }
 
-.nav a {
-  margin-left: 24px;
+.nav__link {
+  margin-right: 24px;
+}
+
+.nav__link:hover {
+  opacity: .6;
 }
 
 .section {
-  margin-top: 306px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex: 1;
+  margin-bottom: 316px;
 }
 
 .information {
@@ -93,13 +116,15 @@ a:hover {
 
 .form__input {
   margin-top: 16px;
-  width: 400px;
+  width: 380px;
   height: 53px;
-  background: #FFFFFF;
   border-radius: 5px;
   border: none;
   font-size: 21px;
   line-height: 25px;
+  padding-left: 16px;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .form__button {
@@ -107,6 +132,7 @@ a:hover {
   width: 400px;
   height: 53px;
   background: #7400E8;
+  color: #FFFFFF;
   border-radius: 5px;
   font-size: 21px;
   line-height: 25px;
@@ -118,7 +144,7 @@ a:hover {
 
 .form__button:hover {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: .6;
 }
 
 .form__text {
@@ -127,7 +153,8 @@ a:hover {
   height: 37px;
   font-size: 16px;
   line-height: 19px;
-  opacity: 0.5;
+  opacity: .5;
+  color: #000000;
 }
 
 .form__text_link {
@@ -138,10 +165,11 @@ a:hover {
   opacity: 1;
 }
 
-.line {
-  position: absolute;
-  bottom: 0;
-  width: 99.90%;
-  height: 22px;
+.footer {
+  height: 23px;
   background: #7400E8;
+}
+
+@media (max-width: 1366px) {
+
 }

@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <link rel='stylesheet' href='css/style.css' type='text/css'>
+  <link rel='stylesheet' href='./css/fonts.css'>
+  <link rel='stylesheet' href='./css/style.css'>
   <title>Cloudex</title>
 </head>
 <body>
   <div class="content">
-    <header class="header">
+    <div class="header">
       <img class="header__logo" src="img/cloudex-logo.svg" alt="logo">
       <nav class="nav">
         <a class="nav__link" href="">Features</a>
@@ -24,8 +22,11 @@
         <a class="nav__link" href="">
           <img src="img/twitter-logo.svg" alt="twitter-logo">
         </a>
+        <a class="burger" href="">
+          <img src="img/Burger.svg" alt="Burger">
+        </a>
       </nav>
-    </header>
+    </div>
     <div class="section">
       <div class="information">
         <div class="information__title">
@@ -33,18 +34,16 @@
           To all your data.
           Totally free.
         </div>
-        <div class="information__text">
-          Secure unlimited File Sharing and Storage for your Business. <br>
-          Absolutely Free! Iterate In Real Time. Comment With Style. <br>
+        <div class="information__text">Secure unlimited File Sharing and Storage for your Business.
+          Absolutely Free! Iterate In Real Time. Comment With Style.
           Share Instantly.
         </div>
       </div>
       <form class="form">
         <div class="form__title">Take part in beta:</div>
-        <input class="form__input" placeholder="E-mail">
+        <input class="form__input" name="E-mail" placeholder="E-mail">
         <div class="form__button">Get early access</div>
-        <div class="form__text">
-          By clicking sign-up, i agree to the
+        <div class="form__text">By clicking sign-up, i agree to the
           <a class="form__text form__text_link" href="">Terms of Service</a>
           and
           <a class="form__text form__text_link" href="">Privacy Policy</a>
@@ -52,6 +51,7 @@
       </form>
     </div>
   </div>
-  <div class="line"></div>
+  <div class="footer"></div>
+  </div>
 </body>
 </html>

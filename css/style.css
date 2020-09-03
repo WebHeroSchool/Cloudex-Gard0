@@ -1,44 +1,59 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Caribian', sans-serif;
+  margin: 0;
+  position: relative;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  width: 1186px;
+  height: 811px;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/Cloud-big.png");
+  background-size: cover;
+  z-index: -1;
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  width: 922px;
+  height: 613px;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/Cloud-small.png");
+  background-size: cover;
+  z-index: -1;
 }
 
 a {
   text-decoration: none;
   color: #000000;
-  opacity: 1;
-  cursor: pointer;
-}
-
-a:hover {
-  opacity: 0.6;
 }
 
 .content {
-  width: 1366px;
-  height: 100%;
+  width: 1503px;
   margin: auto;
-}
-
-.header__logo {
-  opacity: 1;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__logo:hover {
-  opacity: 0.6;
+  opacity: .6;
 }
 
 .header {
-  position: relative;
-  margin-top: 52px;
-  height: 80px;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: bold;
+  padding-top: 52px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 0 0 auto;
+  margin-bottom: 306px;
+}
+
+.header__logo {
+  cursor: pointer;
 }
 
 .nav {
@@ -47,16 +62,28 @@ a:hover {
   align-items: center;
 }
 
-.nav a {
-  margin-left: 24px;
+.nav__link {
+  padding-right: 24px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.nav__link:hover {
+  opacity: .6;
+}
+
+.burger {
+  display: none;
 }
 
 .section {
-  margin-top: 306px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex: 1;
+  margin-bottom: 316px;
 }
 
 .information {
@@ -67,13 +94,15 @@ a:hover {
 .information__title {
   font-weight: bold;
   width: 527px;
+  height: 211px;
   font-size: 60px;
   line-height: 70px;
+  padding-bottom: 43px;
 }
 
 .information__text {
-  margin-top: 43px;
-  font-style: normal;
+  width: 577px;
+  height: 74px;
   font-size: 21px;
   line-height: 25px;
 }
@@ -89,24 +118,28 @@ a:hover {
   font-weight: bold;
   font-size: 24px;
   line-height: 31px;
+  margin-bottom: 16px;
 }
 
 .form__input {
-  margin-top: 16px;
-  width: 400px;
+  width: 399px;
   height: 53px;
-  background: #FFFFFF;
   border-radius: 5px;
   border: none;
   font-size: 21px;
   line-height: 25px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  color: #000000;
+  margin-bottom: 16px;
 }
 
 .form__button {
-  margin-top: 16px;
-  width: 400px;
+  width: 399px;
   height: 53px;
   background: #7400E8;
+  color: #FFFFFF;
   border-radius: 5px;
   font-size: 21px;
   line-height: 25px;
@@ -114,20 +147,21 @@ a:hover {
   align-items: center;
   justify-content: center;
   opacity: 1;
+  margin-bottom: 16px;
 }
 
 .form__button:hover {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: .6;
 }
 
 .form__text {
-  margin-top: 16px;
   width: 400px;
   height: 37px;
   font-size: 16px;
   line-height: 19px;
-  opacity: 0.5;
+  opacity: .5;
+  color: #000000;
 }
 
 .form__text_link {
@@ -138,10 +172,206 @@ a:hover {
   opacity: 1;
 }
 
-.line {
-  position: absolute;
-  bottom: 0;
-  width: 99.90%;
-  height: 22px;
+.footer {
+  height: 23px;
   background: #7400E8;
+}
+
+@media (max-width: 1366px) {
+  body::before {
+    width: 890px;
+    height: 752px;
+  }
+  body::after {
+    width: 764px;
+    height: 538px;
+  }
+  .content {
+    width: 1050px;
+  }
+  .nav__link {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .section {
+    justify-content: space-between;
+  }
+  .information__title {
+    width: 381px;
+    height: 155px;
+    font-size: 44px;
+    line-height: 52px;
+  }
+  .information__text {
+    width: 381px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__title {
+    width: 155px;
+    height: 24px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .form__input {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__button {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__text {
+    width: 293px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  body::before {
+    width: 665px;
+    height: 723px;
+  }
+  body::after {
+    width: 476px;
+    height: 532px;
+  }
+  .content {
+    width: 916px;
+  }
+  .nav__link {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .section {
+    justify-content: space-around;
+  }
+  .information__title {
+    width: 381px;
+    height: 155px;
+    font-size: 44px;
+    line-height: 52px;
+  }
+  .information__text {
+    width: 381px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__title {
+    width: 155px;
+    height: 24px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .form__input {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__button {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__text {
+    width: 293px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  body::before {
+    position: absolute;
+    content: "";
+    width: 615px;
+    height: 536px;
+    right: 0;
+    bottom: 0;
+    background-image: url("../img/Mobile_cloud.png");
+    background-size: cover;
+    z-index: -1;
+  }
+  body::after {
+    display: none;
+  }
+  .header {
+    padding-top: 32px;
+    margin-bottom: 60px;
+    justify-content: space-between;
+  }
+  .content {
+    width: 300px;
+    justify-content: space-around;
+  }
+  .nav__link {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger:hover {
+    opacity: 0.6;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .information__title {
+    width: 300px;
+    height: 124px;
+    font-size: 35px;
+    line-height: 41px;
+    margin-bottom: 26px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  .information__text {
+    width: 300px;
+    height: 75px;
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 85px;
+  }
+  .form__title {
+    width: 155px;
+    height: 24px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .form__input {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__button {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .form__text {
+    width: 293px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .footer {
+    display: none;
+  }
 }

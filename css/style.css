@@ -45,7 +45,7 @@ a {
 }
 
 .header {
-  padding-top: 52px;
+  margin-top: 52px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,10 +63,14 @@ a {
 }
 
 .nav__link {
-  padding-right: 24px;
+  margin-right: 24px;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
+}
+
+.nav__link:last-child {
+  margin-right: 0;
 }
 
 .nav__link:hover {
@@ -97,7 +101,7 @@ a {
   height: 211px;
   font-size: 60px;
   line-height: 70px;
-  padding-bottom: 43px;
+  margin-bottom: 43px;
 }
 
 .information__text {
@@ -289,7 +293,7 @@ a {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 385px) {
   body::before {
     position: absolute;
     content: "";
@@ -305,7 +309,7 @@ a {
     display: none;
   }
   .header {
-    padding-top: 32px;
+    margin-top: 32px;
     margin-bottom: 60px;
     justify-content: space-between;
   }
@@ -339,7 +343,7 @@ a {
     margin-bottom: 26px;
   }
   .information__text {
-    width: 300px;
+    width: 290px;
     height: 75px;
     font-size: 16px;
     line-height: 19px;

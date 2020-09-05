@@ -299,7 +299,7 @@ a {
   body::before {
     position: absolute;
     content: "";
-    width: 890px;
+    width: 686px;
     height: 550px;
     right: 0;
     bottom: 0;
@@ -380,5 +380,39 @@ a {
   }
   .footer {
     display: none;
+  }
+  /* mobile */
+  .mobile {
+    position: relative;
+    margin-top: 51px;
+    height: 680px;
+  }
+  .cross {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-right: 26px;
+    margin-bottom: 115px;
+  }
+  .cross:hover {
+    opacity: .6;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu__link {
+    height: 36px;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+  .menu__link:last-child {
+    margin-bottom: 0px;
+  }
+  .menu__link:hover {
+    opacity: .6;
   }
 }

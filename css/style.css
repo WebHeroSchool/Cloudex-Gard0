@@ -7,8 +7,8 @@ body {
 body::before {
   position: absolute;
   content: "";
-  width: 1186px;
-  height: 811px;
+  width: 65%;
+  height: 80%;
   right: 0;
   bottom: 0;
   background-image: url("../img/Cloud-big.png");
@@ -19,8 +19,8 @@ body::before {
 body::after {
   position: absolute;
   content: "";
-  width: 922px;
-  height: 613px;
+  width: 60%;
+  height: 65%;
   right: 0;
   bottom: 0;
   background-image: url("../img/Cloud-small.png");
@@ -34,7 +34,7 @@ a {
 }
 
 .content {
-  width: 1503px;
+  width: calc(100% - 100px);
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -184,16 +184,14 @@ a {
 
 @media (max-width: 1366px) {
   body::before {
-    width: 890px;
-    height: 752px;
+    width: 65%;
+    height: 80%;
   }
   body::after {
-    width: 764px;
-    height: 538px;
+    width: 60%;
+    height: 65%;
   }
-  .content {
-    width: 1050px;
-  }
+
   .nav__link {
     font-size: 14px;
     line-height: 16px;
@@ -241,16 +239,14 @@ a {
 
 @media (max-width: 1024px) {
   body::before {
-    width: 665px;
-    height: 723px;
+    width: 65%;
+    height: 80%;
   }
   body::after {
-    width: 476px;
-    height: 532px;
+    width: 60%;
+    height: 65%;
   }
-  .content {
-    width: 916px;
-  }
+
   .nav__link {
     font-size: 14px;
     line-height: 16px;
@@ -299,8 +295,8 @@ a {
   body::before {
     position: absolute;
     content: "";
-    width: 686px;
-    height: 550px;
+    width: 163%;
+    height: 56%;
     right: 0;
     bottom: 0;
     background-image: url("../img/Mobile_cloud.png");
@@ -311,14 +307,15 @@ a {
     display: none;
   }
   .header {
-    width: 300px;
+    min-width: 290px;
+    max-width: 100%;
     margin-top: 32px;
     margin-bottom: 60px;
     justify-content: space-between;
   }
   .content {
-    width: 300px;
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
   }
   .nav__link {
     display: none;
@@ -340,6 +337,7 @@ a {
     height: 124px;
     font-size: 35px;
     line-height: 41px;
+    margin-right: 0;
     margin-bottom: 26px;
     align-items: center;
     text-align: center;

@@ -7,8 +7,8 @@ body {
 body::before {
   position: absolute;
   content: "";
-  width: 1186px;
-  height: 811px;
+  width: 65%;
+  height: 80%;
   right: 0;
   bottom: 0;
   background-image: url("../img/Cloud-big.png");
@@ -19,8 +19,8 @@ body::before {
 body::after {
   position: absolute;
   content: "";
-  width: 922px;
-  height: 613px;
+  width: 60%;
+  height: 65%;
   right: 0;
   bottom: 0;
   background-image: url("../img/Cloud-small.png");
@@ -34,7 +34,7 @@ a {
 }
 
 .content {
-  width: 1503px;
+  width: calc(100% - 100px);
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -184,15 +184,12 @@ a {
 
 @media (max-width: 1366px) {
   body::before {
-    width: 890px;
-    height: 752px;
+    width: 65%;
+    height: 80%;
   }
   body::after {
-    width: 764px;
-    height: 538px;
-  }
-  .content {
-    width: 1050px;
+    width: 60%;
+    height: 65%;
   }
   .nav__link {
     font-size: 14px;
@@ -241,15 +238,12 @@ a {
 
 @media (max-width: 1024px) {
   body::before {
-    width: 665px;
-    height: 723px;
+    width: 65%;
+    height: 80%;
   }
   body::after {
-    width: 476px;
-    height: 532px;
-  }
-  .content {
-    width: 916px;
+    width: 60%;
+    height: 65%;
   }
   .nav__link {
     font-size: 14px;
@@ -299,8 +293,8 @@ a {
   body::before {
     position: absolute;
     content: "";
-    width: 890px;
-    height: 550px;
+    width: 163%;
+    height: 56%;
     right: 0;
     bottom: 0;
     background-image: url("../img/Mobile_cloud.png");
@@ -311,14 +305,14 @@ a {
     display: none;
   }
   .header {
-    width: 300px;
+    min-width: 290px;
+    max-width: 100%;
     margin-top: 32px;
     margin-bottom: 60px;
     justify-content: space-between;
   }
   .content {
-    width: 300px;
-    justify-content: space-between;
+    align-items: center;
   }
   .nav__link {
     display: none;
@@ -340,6 +334,7 @@ a {
     height: 124px;
     font-size: 35px;
     line-height: 41px;
+    margin-right: 0;
     margin-bottom: 26px;
     align-items: center;
     text-align: center;
@@ -381,4 +376,57 @@ a {
   .footer {
     display: none;
   }
+  /* mobile */
+  .mobile {
+    width: calc(100% - 56px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 205px;
+    max-width: 385px;
+    margin-top: 50px;
+  }
+}
+
+.body_mobile {
+  margin: 0;
+  position: relative;
+}
+
+.body_mobile::before {
+  display: none;
+}
+
+.cross {
+  margin-bottom: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cross:hover {
+  opacity: .6;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__link {
+  height: 36px;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 24px;
+}
+
+.menu__link:last-child {
+  margin-bottom: 0px;
+}
+
+.menu__link:hover {
+  opacity: .6;
+}
+
 }
